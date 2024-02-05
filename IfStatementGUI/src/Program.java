@@ -20,6 +20,20 @@ public class Program {
         frame.setSize(400, 100);
         frame.setVisible(true);
 
+        submit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int score = Integer.parseInt(textField.getText());
+                if (score == 5) {
+                    lbl_conceito.setText("Excellet!");
+                }else if (score == 4) {
+                    lbl_conceito.setText("Good!");
+
+                } else {
+                    lbl_conceito.setText("Need to catch up!");
+                }
+            }
+        });
 
 
     }
